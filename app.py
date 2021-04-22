@@ -121,7 +121,7 @@ def detect_and_replace(image_b64):
     # Detect faces in the image
     faces = faceCascade.detectMultiScale(
         gray,
-        scaleFactor=1.1,
+        scaleFactor=1.2,
         minNeighbors=5,
         minSize=(30, 30),
         flags=cv2.CASCADE_SCALE_IMAGE
