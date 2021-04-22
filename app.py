@@ -5,6 +5,7 @@ import dash
 import cv2
 from PIL import Image
 import base64
+from base64 import decodebytes
 from io import BytesIO
 import numpy as np
 
@@ -64,7 +65,13 @@ def parse_contents(contents):
         # HTML images accept base64 encoded strings in the same format
         # that is supplied by the upload
         html.Img(src='data:image/png;base64,{}'.format(contents)),
-        ]),
+        html.Hr(),
+        html.Div('Raw Content'),
+        html.Pre(contents[0:200] + '...', style={
+            'whiteSpace': 'pre-wrap',
+            'wordBreak': 'break-all'
+        })
+    ])
 
 
 def PIL_to_b64(image_pil):
