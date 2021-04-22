@@ -106,7 +106,7 @@ def detect_and_replace(image_b64):
 
     # create the haar cascade
     faceCascade = cv2.CascadeClassifier(
-        'F:/Documents/Code/PycharmProjects/DeepLearningForFun/MemeMan-izator/haarcascade_frontalface_default.xml')
+        'haarcascade_frontalface_default.xml')
 
     # Read the image
     gray = cv2.cvtColor(image_cv2, cv2.COLOR_BGR2GRAY)
@@ -133,7 +133,7 @@ def detect_and_replace(image_b64):
         finalImage.paste(resizedMememanImage, position, resizedMememanImage)
         finalImage.save('jobDone.png')
 
-    with open("F:/Documents/Code/PycharmProjects/DeepLearningForFun/MemeMan-izator/jobDone.png", "rb") as img_file:
+    with open("jobDone.png", "rb") as img_file:
         b64_string = str(base64.b64encode(img_file.read()))
 
         correct_b64_string = b64_string[2:len(b64_string)-1]
