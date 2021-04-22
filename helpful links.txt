@@ -1,0 +1,9 @@
+https://realpython.com/face-recognition-with-python/
+
+https://auth0.com/blog/image-processing-in-python-with-pillow/
+
+https://community.plotly.com/t/uploading-multiple-images/7761
+
+https://jdhao.github.io/2020/03/17/base64_opencv_pil_image_conversion/
+
+https://codebeautify.org/base64-to-image-converter
